@@ -1,6 +1,6 @@
-<!DOCTYPE html>
 <html>
-  <head>
+<head>
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400&amp;display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <style>
       /* basic reset */
@@ -26,6 +26,7 @@
         height: 100%;
         overflow-x: hidden;
         overflow-y: hidden;
+        font-family: 'Ubuntu Mono', monospace;
       }
 
       canvas {
@@ -43,6 +44,15 @@
         color : #FFFFFF;
         box-sizing: border-box;
         vertical-align: middle;
+      }
+      #author a {
+        color: #56ca0e;
+      }
+      #author a:hover {
+        color: #ec0000;
+      }
+      #author a:link:active, a:visited:active {
+        color: #56ca0e;
       }
 
       #logo {
@@ -64,8 +74,8 @@
       }
 
       span {
-        font-family: monospace;
-        font-size: 1.5em;
+
+        font-size: 1.75em;
       }
 
       span:after {
@@ -115,8 +125,14 @@
   </g>
 </svg></div>
     </div>
-    <canvas id="c" height="969" width="1920"></canvas>
-    <span id="author">rilvyk</span>
+    <canvas id="c" height="969" width="938"></canvas>
+    <span id="author">rilvyk
+    <a href="https://fanlink.to/synthSYC078"> //Latest release</a>
+    <a href="https://soundcloud.com/contextstudios"> //SoundCloud</a>
+    <a href="https://open.spotify.com/artist/0kioRlce5zigl5EA4D5P0d
+"> //Spotify</a>
+    <a href="https://www.instagram.com/contextstudiosmusic/"> //Instagram</a>
+</span>
 
     <script>
       // getting canvas by id c
@@ -171,5 +187,7 @@
 
       setInterval(draw, 35);
     </script>
-  </body>
+
+
+</body>
 </html>
