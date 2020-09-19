@@ -22,7 +22,7 @@ resource "digitalocean_droplet" "swarm2" {
       "sudo apt-get update",
       "sudo apt-get -y install nginx",
       # Grab static html/js page from gist into html dir
-      "sudo wget https://gist.githubusercontent.com/sadminriley/6a3f52b30f124c1e8dbae9f5b1eed847/raw/d46b0aac6f2fe5a7d178969b53168e8ed5caad49/index.html -P /var/www/html",
+      "sudo wget https://gist.githubusercontent.com/sadminriley/6a3f52b30f124c1e8dbae9f5b1eed847/raw/5b739551d41e8d2203bb21f9262d5517376b253c/index.html -P /var/www/html",
     ]
   }
 }
