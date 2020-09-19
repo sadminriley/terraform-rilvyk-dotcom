@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      /* basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* page settings */
+      html {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, #fff 0%, #aaa 100%) no-repeat;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      body {
+        text-align: center;
+        display: table;
+        background: black;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      canvas {
+	display:block;
+      }
+
+      #c {
+        z-index: -1;
+      }
+
+      #author {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color : #FFFFFF;
+        box-sizing: border-box;
+        vertical-align: middle;
+      }
+
+      #logo {
+        opacity: 0.5;
+        transition-timing-function: ease-out;
+        transition: opacity .15s;
+      }
+
+      #logo:hover {
+        opacity: 0.9;
+      }
+
+      div.information {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+      }
+
+      span {
+        font-family: monospace;
+        font-size: 1.5em;
+      }
+
+      span:after {
+        content:"_"
+        opacity: 0;
+        animation: cursor 1s infinite;
+      }
+
+      @keyframes cursor {
+      0% {
+      	opacity: 0;
+      }
+      40% {
+      	opacity: 0;
+      }
+      50% {
+      	opacity: 1;
+      }
+      90% {
+      	opacity: 1;
+      }
+      100% {
+      	opacity: 0;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="information">
+      <div id="logo"><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="rilvyk" version="1.1" viewBox="0 0 210 297" height="297mm" width="210mm">
+  <defs id="defs2"></defs>
+  <metadata id="metadata5">
+    <rdf:rdf>
+      <cc:work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+        <dc:title></dc:title>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <g style="display:inline" id="layer7">
+    <rect y="-66.1073" x="319.13919" height="527.88208" width="535.40369" id="rect3882" style="fill:#1a1a1a;stroke-width:0.26458332"></rect>
+  </g>
+  <g style="display:inline" id="layer3">
+    <path id="circle3824" d="m 106.58178,102.41445 a 42.826098,45.017698 0 0 0 -42.826105,45.01771 42.826098,45.017698 0 0 0 42.826105,45.0177 42.826098,45.017698 0 0 0 42.82611,-45.0177 42.826098,45.017698 0 0 0 -42.82611,-45.01771 z m -0.2059,17.4477 c 6.36689,0 7.88729,0.73257 9.48693,1.26532 1.59964,0.53275 6.77877,2.2642 8.42593,3.61274 1.64716,1.34853 4.78301,4.54502 6.11342,6.79258 1.33039,2.24756 2.12238,4.59494 3.18354,7.80811 1.06115,3.21317 0.98192,5.81035 0.91857,6.72601 -0.0634,0.91568 -0.31676,5.26101 -0.42763,5.9769 -0.11086,0.71589 -1.04533,4.67827 -1.31457,5.32756 -0.13462,0.32465 -1.04819,2.4448 -1.86028,4.12945 -0.70831,1.46935 -0.89551,2.18036 -1.11723,2.64652 -0.44348,0.93232 -1.94017,3.70009 -2.19358,4.06636 -0.25341,0.36627 -2.40745,3.10086 -2.88259,3.73351 -0.47513,0.63264 -0.83142,0.81566 -1.1165,0.8323 -0.28508,0.0167 -0.50687,-0.0956 -0.50687,-0.44525 -0.0158,-0.28302 0.36819,-1.0115 0.27316,-1.04063 0,0 -1.17592,1.52757 -1.49268,1.87719 -0.31677,0.34962 -2.67602,2.68601 -2.91419,2.5139 -0.25341,-0.18314 0.49941,-1.53061 1.29866,-2.98839 0.7325,-1.33605 1.56798,-3.0716 2.42323,-4.71981 1.71051,-3.29641 3.67442,-9.88931 4.498,-12.75286 0.82358,-2.86355 0.34853,-9.37318 0.33269,-10.15566 -0.0158,-0.78248 -0.22181,-2.36403 -1.71059,-2.36403 -1.48878,0 -11.49841,3.14657 -18.51466,3.06333 -7.01627,-0.0832 -10.684179,-0.86797 -10.684179,-0.86797 0,0 -0.0066,0.16874 0.02511,0.41846 0.03167,0.24973 0.110865,0.46616 0.31676,0.78247 0.205894,0.31633 0.332686,0.8824 0.332686,0.8824 0,0 -1.187933,-0.98232 -1.552209,-1.31528 -0.364275,-0.33298 -1.124396,-1.03217 -1.314453,-1.01553 -0.190055,0.0167 -0.332624,1.06545 -0.411815,1.41506 -0.07918,0.34963 -0.07925,0.79918 0.237511,1.31529 0.316762,0.5161 0.269236,0.96556 0.269236,0.96556 0,0 -1.07692,-0.94889 -1.615414,-1.3651 -0.538494,-0.41622 -1.678804,-1.11553 -2.233137,-1.91466 -0.554332,-0.79913 -1.029466,-1.56489 -1.377903,-1.86457 -0.348438,-0.29967 -0.158398,-0.26637 -1.631338,-0.4495 -1.472939,-0.18313 -1.647238,1.19864 -1.868971,2.58047 -0.221732,1.38183 -0.03168,3.61278 0.158382,6.87589 0.190055,3.26312 0.744442,4.46186 1.140391,6.20995 0.395954,1.7481 1.995534,5.74375 2.882464,7.72494 0.88693,1.98117 3.00923,6.29314 3.59524,7.342 0.586006,1.04886 1.203743,2.06434 0.982011,2.31406 -0.221731,0.24973 -1.235409,-0.66587 -1.568009,-1.03213 -0.332601,-0.36627 -1.884713,-2.03109 -2.122284,-2.34742 -0.23757,-0.31632 -1.013674,-1.53171 -1.251247,-1.31528 -0.237571,0.21643 0.712789,1.59828 0.918686,1.8813 0.205892,0.28303 0.23752,0.43288 0.126654,0.54943 -0.110866,0.11654 -0.871025,-0.44955 -1.298652,-0.81583 -0.427626,-0.36626 -1.742269,-2.0811 -2.502495,-3.09667 -0.760227,-1.01556 -2.968291,-4.47583 -4.054458,-6.82593 -0.252333,-0.54596 -0.404571,-1.40121 -1.133167,-2.98014 -0.842347,-1.82544 -1.630632,-4.0704 -1.749417,-4.46165 -0.23757,-0.78248 -0.649339,-2.71382 -0.696854,-3.34646 -0.04751,-0.63264 -0.285134,-2.56388 -0.348487,-3.44625 -0.06335,-0.88237 -0.03158,-5.04451 0.06345,-6.06007 0.09503,-1.01556 0.839327,-3.66262 1.837123,-6.47622 0.997799,-2.81361 2.29657,-4.57833 3.785346,-6.79259 1.488776,-2.21425 5.115723,-5.42748 9.186106,-6.92585 4.070378,-1.49837 6.287663,-2.44733 12.654563,-2.44733 z" style="display:inline;fill:#ffffff;stroke-width:0.06449099"></path>
+    <ellipse ry="47.649567" rx="45.329842" cy="147.38237" cx="106.55521" id="path4693" style="fill:none;stroke:#ffffff;stroke-width:3.50061488;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></ellipse>
+  </g>
+</svg></div>
+    </div>
+    <canvas id="c" height="969" width="1920"></canvas>
+    <span id="author">rilvyk</span>
+
+    <script>
+      // getting canvas by id c
+      var c = document.getElementById("c");
+      var ctx = c.getContext("2d");
+
+      // making the canvas full screen
+      c.height = window.innerHeight;
+      c.width = window.innerWidth;
+
+      // characters
+      var matrix = "RILVYKRILVYKRILVYK@#$%^&*()*&^%";
+
+      // converting the string into an array of single characters
+      matrix = matrix.split("");
+
+      var font_size = 10;
+      var columns = c.width / font_size; //number of columns for the rain
+
+      // an array of drops - one per column
+      var drops = [];
+
+      // x below is the x coordinate
+      // 1 = y co-ordinate of the drop(same for every drop initially)
+      for (var x = 0; x < columns; x++) drops[x] = 1;
+
+      // drawing the characters
+      function draw() {
+        // Black BG for the canvas
+        // translucent BG to show trail
+        ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+        ctx.fillRect(0, 0, c.width, c.height);
+
+        ctx.fillStyle = "#FFFFFF"; //green text
+        ctx.font = font_size + "px arial";
+        // looping over drops
+        for (var i = 0; i < drops.length; i++) {
+          // a random character to print
+          var text = matrix[Math.floor(Math.random() * matrix.length)];
+          //x = i*font_size, y = value of drops[i]*font_size
+          ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+          // sending the drop back to the top randomly after it has crossed the screen
+          // adding a randomness to the reset to make the drops scattered on the Y axis
+          if (drops[i] * font_size > c.height && Math.random() > 0.775)
+            drops[i] = 0;
+
+          // incrementing Y coordinate
+          drops[i]++;
+        }
+      }
+
+      setInterval(draw, 35);
+    </script>
+  </body>
+</html>

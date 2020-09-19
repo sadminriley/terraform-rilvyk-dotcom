@@ -21,8 +21,10 @@ resource "digitalocean_droplet" "swarm" {
       # install nginx
       "sudo apt-get update",
       "sudo apt-get -y install nginx",
-      # Grab static html/js page from gist into html dir
-      "sudo wget https://gist.githubusercontent.com/sadminriley/6a3f52b30f124c1e8dbae9f5b1eed847/raw/5b739551d41e8d2203bb21f9262d5517376b253c/index.html -P /var/www/html",
     ]
+  }
+  provisioner "file" {
+    source = "${path.module}/./index.html"
+    destination = "/var/www/html/index.html"
   }
 }
